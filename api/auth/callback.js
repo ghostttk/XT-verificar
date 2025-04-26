@@ -7,11 +7,11 @@ export default async function handler(req, res) {
   }
 
   const params = new URLSearchParams();
-  params.append('client_id', '1351391324884172821'); // Seu Client ID
+  params.append('client_id', '1351391324884172821'); // Seu Client ID do Discord
   params.append('client_secret', 'SEU_CLIENT_SECRET'); // Substitua pelo seu Client Secret
   params.append('grant_type', 'authorization_code');
   params.append('code', code);
-  params.append('redirect_uri', 'https://xtsystemverificar.vercel.app'); // URI de verificação
+  params.append('redirect_uri', 'https://xtsystemverificar.vercel.app'); // URL de redirecionamento de verificação
 
   // Requisição para obter o access_token
   const response = await fetch('https://discord.com/api/oauth2/token', {
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
   const userData = await userResponse.json();
   console.log("Usuário autenticado:", userData);
 
-  // Agora, após a autenticação bem-sucedida, redirecionamos para o site final
-  return res.redirect('https://xtsystemshop.vercel.app'); // Redirecionamento para o site final
+  // Agora, depois da autenticação, redirecionamos para o site final
+  // Evitamos o loop redirecionando o usuário para o site final corretamente.
+  return res.redirect('https://xtsystemshop.vercel.app'); // Redirecionamento correto para o site final
 }
-
