@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   params.append('client_secret', 'xBWOR-RMOvkWAOG1h3gTenstL-pGFt0n'); // Substitua pelo seu Client Secret
   params.append('grant_type', 'authorization_code');
   params.append('code', code);
-  params.append('redirect_uri', 'https://xtsystemverificar.vercel.app');
+  params.append('redirect_uri', 'https://xtsystemshop.vercel.app');
 
   const response = await fetch('https://discord.com/api/oauth2/token', {
     method: 'POST',
