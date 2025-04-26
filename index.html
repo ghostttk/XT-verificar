@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XT SysteM Shop - Login</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://public-blob.squarecloud.dev/1057518718378324009/57260387713_m9yqp8kw-d1e4.png" type="image/png">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #111;
+      padding: 2rem;
+      border: 2px solid #9b59b6;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #9b59b6;
+    }
+
+    button {
+      background-color: #fff;
+      color: #9b59b6;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>XT SysteM Shop</h1>
+    <p>Faça login com seu Discord para continuar</p>
+    <a href="https://discord.com/oauth2/authorize?client_id=1351391324884172821&redirect_uri=https%3A%2F%2Fxtsystemshop.vercel.app%2Fapi%2Fauth%2Fcallback&response_type=code&scope=identify">
+      <button>Entrar com Discord</button>
+    </a>
+  </div>
+
+</body>
+</html>
